@@ -4,6 +4,9 @@ class Student {
     private int id;
     private String name;
 
+    /**
+     *Getter Setters
+     */
     public void setId(int i) {
         id = i;
     }
@@ -19,9 +22,11 @@ class Student {
     public String getName() {
         return name;
     }
+
 }
 
 public class EncapsulationDemo {
+
     public static void main(String[] args) {
 
         Student s = new Student();
@@ -32,4 +37,5 @@ public class EncapsulationDemo {
         System.out.println("id = " + s.getId());
         System.out.println("Name = " + s.getName());
     }
+
 }

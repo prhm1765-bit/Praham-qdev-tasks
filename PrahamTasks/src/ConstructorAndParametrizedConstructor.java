@@ -1,12 +1,18 @@
-class Sum{
+class Sum {
 
-    //normal constructor
-     Sum(){
+    /**
+     * Normal Constructor
+     */
+     Sum() {
          System.out.println("calling sum constructor");
      }
 
-     //parametrized constructor
-     Sum(int a, int b){
+    /**
+     * Parameterized Constructor
+     * @param a
+     * @param b
+     */
+     Sum(int a, int b) {
          int c=a+b;
          System.out.println("calling parametrized constructor:"+ c);
      }
@@ -15,6 +21,7 @@ class Sum{
 
 
 public class ConstructorAndParametrizedConstructor {
+
     public static void main(String[] args){
         Sum sum=new Sum();
         Sum sum1=new Sum(10,20);

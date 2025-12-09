@@ -1,4 +1,5 @@
 class MethodOverload {
+
     public void add(int a, int b) {
         int sum = a+b;
         System.out.println("Method with 2 parameter got caleed" + sum);
@@ -13,18 +14,21 @@ class MethodOverload {
     public void greet() {
         System.out.println("Hello, Good Morning!");
     }
+
 }
 
 class MethodOverride extends MethodOverload {
+
     //Method Overriding
     public void greet() {
         System.out.println("Hello, Good Evening!");
     }
+
 }
 
 public class PolymorphismDemo {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         // Parent class with the object of Child class
         MethodOverload methodOverride = new MethodOverride();
         methodOverride.greet();
@@ -32,6 +36,6 @@ public class PolymorphismDemo {
         MethodOverload methodOverload = new MethodOverload();
         methodOverload.add(1,2,3);
         methodOverload.add(1,2);
-
     }
+
 }

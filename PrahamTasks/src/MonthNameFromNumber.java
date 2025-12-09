@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
 public class MonthNameFromNumber {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         //code to get month name from number with switch case
         System.out.print("Enter the month number(1-12): ");
         Scanner sc = new Scanner(System.in);
         int month = sc.nextInt();
 
-        switch(month){
+        switch  (month) {
             case 1: System.out.println("January");
             break;
             case 2: System.out.println("February");
@@ -37,4 +37,5 @@ public class MonthNameFromNumber {
         }
         sc.close();
     }
+
 }

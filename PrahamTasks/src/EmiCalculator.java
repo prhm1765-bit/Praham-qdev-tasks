@@ -1,11 +1,17 @@
 import java.util.Scanner;
 
+/**
+ * Class for EMI calculation Process
+ */
 class Emi {
 
     double P;   // Loan Amount
     double R;   // Interest Rate
     int T;      // Time in years
 
+    /**
+     * Method for Getting the inputted data
+     */
     void getInput() {
         Scanner sc = new Scanner(System.in);
 
@@ -19,8 +25,10 @@ class Emi {
         T = sc.nextInt();
     }
 
+    /**
+     * Method for calculating the EMI
+     */
     void calculateEmi() {
-
         double monthlyRate = R / (12 * 100);
         int months = T * 12;
 
@@ -29,14 +37,17 @@ class Emi {
 
         System.out.println("Monthly EMI = " + EMI);
     }
+
 }
 
+
 public class EmiCalculator {
+
     public static void main(String[] args) {
 
         Emi obj = new Emi();
-
         obj.getInput();
         obj.calculateEmi();
     }
+
 }

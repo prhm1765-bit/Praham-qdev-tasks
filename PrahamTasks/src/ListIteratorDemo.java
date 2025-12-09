@@ -3,7 +3,9 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ListIteratorDemo {
+
     public static void main(String[] args) {
+
         List<String> list = new ArrayList<String>();
         list.add("Hello");
         list.add("World");
@@ -13,9 +15,10 @@ public class ListIteratorDemo {
 
         Iterator<String> itr = list.iterator();
 
-        while(itr.hasNext()){
+        while (itr.hasNext()) {
             String currentValue = itr.next();
             System.out.println("Current value of the list through the Iterator is: " + currentValue);
         }
     }
+
 }

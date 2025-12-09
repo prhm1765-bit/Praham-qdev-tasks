@@ -1,41 +1,72 @@
-// Parent Class
+/**
+ * Paraent class
+ */
 class Animal {
+
+    /**
+     * Every animal eats
+     * @deprecated no
+     */
     void eat() {
         System.out.println("Animal eats food");
     }
+
 }
 
-// Single Inheritance
+/**
+ *
+ *Single Inheritance
+ */
 class Dog extends Animal {
+
     void bark() {
         System.out.println("Dog barks");
     }
+
 }
 
-// Multilevel Inheritance
+/**
+ *
+ *Single Inheritance
+ */
 class Puppy extends Dog {
+
     void weep() {
         System.out.println("Puppy weeps");
     }
+
 }
 
-// Hierarchical Inheritance
+/**
+ *
+ * Hirarchical Inheritance
+ */
 class Cat extends Animal {
+
     void meow() {
         System.out.println("Cat meows");
     }
+
 }
 
-// Hybrid Inheritance using Interfaces
+/**
+ *
+ * Hybrid Inheritance
+ */
 interface Flyable {
+
     void fly();
+
 }
 
 interface Swimmable {
+
     void swim();
+
 }
 
 class Duck extends Animal implements Flyable, Swimmable {
+
     public void fly() {
         System.out.println("Duck can fly");
     }
@@ -43,11 +74,12 @@ class Duck extends Animal implements Flyable, Swimmable {
     public void swim() {
         System.out.println("Duck can swim");
     }
+
 }
 
 public class InheritanceDemo {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         System.out.println("Single Inheritance");
         Dog d = new Dog();
         d.eat();
@@ -70,4 +102,5 @@ public class InheritanceDemo {
         dk.fly();
         dk.swim();
     }
+
 }

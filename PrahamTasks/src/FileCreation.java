@@ -2,8 +2,8 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 public class FileCreation {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         try {
@@ -29,11 +29,10 @@ public class FileCreation {
             fw.close();
 
             System.out.println("Data has been written successfully into myTestFile.txt");
-
         } catch (Exception e) {
             System.out.println("Something went wrong while writing to the file");
         }
-
         sc.close();
     }
+
 }

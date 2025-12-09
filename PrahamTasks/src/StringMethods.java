@@ -35,4 +35,5 @@ public class StringMethods {
         int num = Integer.parseInt(str);
         System.out.println("number is:" + num);
     }
+
 }

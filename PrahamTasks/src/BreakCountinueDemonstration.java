@@ -1,20 +1,23 @@
+/**
+ * class for demonstration of break and continue
+ */
 public class BreakCountinueDemonstration {
+
     public static void main(String[] args) {
 
-        //Code to print even number and stop the for loop at 8
-
-        for(int j=0;j<10;j++){
-
-            if(j==8){
+        /**
+         * @param j is used to traversing
+         * Code to print even number and stop the for loop at 8
+         */
+        for (int j=0; j<10; j++) {
+            if (j==8) {
                 break;
             }
-
-            if(j%2==0){
+            if (j%2==0) {
                 continue;
             }
-
             System.out.println(j);
-
         }
     }
+
 }

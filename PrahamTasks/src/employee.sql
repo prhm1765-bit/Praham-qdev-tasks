@@ -1,6 +1,6 @@
 USE employee;
 
-#--------------------------Create Table-------------------------
+--------------------------Create Table-------------------------
 
 CREATE TABLE hobby(id varchar(10) PRIMARY KEY,
 name varchar(100));
@@ -24,7 +24,7 @@ emp_id varchar(10),
 FOREIGN KEY(emp_id) REFERENCES employee(id),
 FOREIGN KEY(hobby_id) REFERENCES hobby(id));
 
-#--------------------------Insert Data---------------------------
+--------------------------Insert Data---------------------------
 
 INSERT INTO hobby (id, name) VALUES
 ('1', 'Cricket'),
@@ -47,8 +47,6 @@ INSERT INTO employee (id, first_name, last_name, age, mobile_number, address) VA
 ('9', 'Suman',  'Das',    34, '9876543218', 'Kolkata'),
 ('10','Rohit',  'Joshi',  31, '9876543219', 'Jaipur');
 
-SELECT * FROM employee;
-
 INSERT INTO employee_salary (id, salary, salary_date, emp_id) VALUES
 ('1',  40000, '2024-01-01', '1'),
 ('2',  55000, '2024-01-01', '2'),
@@ -60,8 +58,6 @@ INSERT INTO employee_salary (id, salary, salary_date, emp_id) VALUES
 ('8',  47000, '2024-01-01', '8'),
 ('9',  70000, '2024-01-01', '9'),
 ('10', 58000, '2024-01-01', '10');
-
-SELECT * FROM employee_salary;
 
 INSERT INTO employee_hobby (id, hobby_id, emp_id) VALUES
 ('1',  '1', '1'),
@@ -79,9 +75,7 @@ INSERT INTO employee_hobby (id, hobby_id, emp_id) VALUES
 ('13', '6', '10'),
 ('14', '7', '10');
 
-SELECT * FROM employee_hobby;
-
-#--------------------------------Update Data------------------------------
+--------------------------------Update Data------------------------------
 
 UPDATE hobby
 SET name = 'Indoor Gaming'
@@ -99,7 +93,7 @@ UPDATE employee_hobby
 SET hobby_id = '5'
 WHERE emp_id = '2' AND hobby_id = '2';
 
-#----------------------------------Delete Data------------------------------
+----------------------------------Delete Data------------------------------
 
 DELETE FROM employee_hobby
 WHERE id IN ('14', '13','8', '12');
@@ -113,7 +107,7 @@ WHERE id IN ('10', '9');
 DELETE FROM hobby 
 WHERE id IN ('7')
 
-#---------------------------------Truncate Tables------------------------- 
+---------------------------------Truncate Tables-------------------------
 
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -127,7 +121,7 @@ Truncate TABLE employee
 
 SET FOREIGN_KEY_CHECKS = 1;
 
-#----------------------------------Select Tables---------------------------
+----------------------------------Select Tables---------------------------
 
 SELECT * FROM hobby;
 
@@ -137,20 +131,20 @@ SELECT * FROM employee_salary;
 
 SELECT * FROM employee_hobby;
 
-#Create a select single query to get all employee name, all hobby_name in single column
+--Create a select single query to get all employee name, all hobby_name in single column
 
 SELECT first_name FROM employee
 UNION ALL
 SELECT name FROM hobby
 
-#Create a select query to get  employee name, his/her employee_salary 
+--Create a select query to get  employee name, his/her employee_salary
 
 SELECT e.first_name, es.salary 
 FROM employee e 
 LEFT JOIN employee_salary es
 ON e.id = es.emp_id ;
 
-#Create a select query to get employee name, total salary of employee, hobby name(comma-separated - you need to use subquery for hobby name). 
+--Create a select query to get employee name, total salary of employee, hobby name(comma-separated - you need to use subquery for hobby name).
 
 SELECT e.first_name, es.salary AS total_salary, (SELECT GROUP_CONCAT(h.name SEPARATOR ', ') FROM employee_hobby eh LEFT JOIN	hobby h ON	eh.emp_id = e.id) AS hobbies 
 FROM employee e 

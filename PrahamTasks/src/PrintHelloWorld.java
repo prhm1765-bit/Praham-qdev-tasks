@@ -11,9 +11,7 @@ public class PrintHelloWorld {
      * @throws Exception No Exception as of now
      */
     public static void main(String[] args) {
-
         // This is a single line comment
-
         /*
         * This
         * is
@@ -21,4 +19,5 @@ public class PrintHelloWorld {
         * */
         System.out.printf("Hello World");
     }
+
 }
