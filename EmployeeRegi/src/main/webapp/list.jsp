@@ -33,6 +33,8 @@
 </head>
 <body>
 
+<jsp:include page="/WEB-INF/header.jsp" />
+
 <h2 style="text-align:center;">Employee List</h2>
 
 <table>
@@ -59,9 +61,10 @@
         <td><%= emp.getContactno() %></td>
 
         <td>
-            <a class="edit" href="edit?id=<%= emp.getId() %>">Edit</a>
-            <a class="delete" href="delete?id=<%= emp.getId() %>">Delete</a>
+            <a class="edit" href="<%= request.getContextPath() %>/EmployeeServlet/edit?id=<%= emp.getId() %>">Edit</a>
+            <a class="delete" href="<%= request.getContextPath() %>/EmployeeServlet/delete?id=<%= emp.getId() %>">Delete</a>
         </td>
+
     </tr>
     <%
             }
@@ -70,5 +73,6 @@
 
 </table>
 
+<jsp:include page="/WEB-INF/footer.jsp" />
 </body>
 </html>
