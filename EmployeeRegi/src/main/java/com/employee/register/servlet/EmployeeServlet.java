@@ -15,6 +15,7 @@ import java.util.*;
 
 @WebServlet("/EmployeeServlet/*")
 public class EmployeeServlet extends HttpServlet {
+
     private EmployeeDao employeeDAO;
 
     @Override
@@ -306,4 +307,5 @@ public class EmployeeServlet extends HttpServlet {
     private String safeTrim(String s) {
         return s == null ? "" : s.trim();
     }
+
 }

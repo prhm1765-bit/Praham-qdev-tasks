@@ -68,11 +68,9 @@
                     );
                     list.add(emp);
                 }
-
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
             return list;
         }
 
@@ -81,10 +79,8 @@
 
             try (Connection conn = getConnection();
                  PreparedStatement ps = conn.prepareStatement("DELETE FROM employee WHERE id=?")) {
-
                 ps.setInt(1, id);
                 return ps.executeUpdate() > 0;
-
             } catch (Exception e) {
                 e.printStackTrace();
                 return false;
@@ -98,10 +94,8 @@
 
             try (Connection conn = getConnection();
                  PreparedStatement ps = conn.prepareStatement("SELECT * FROM employee WHERE id=?")) {
-
-                ps.setInt(1, id);
-
-                ResultSet rs = ps.executeQuery();
+                 ps.setInt(1, id);
+                 ResultSet rs = ps.executeQuery();
 
                 if (rs.next()) {
                     emp = new Employee(
@@ -114,11 +108,9 @@
                             rs.getString("contactno")
                     );
                 }
-
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
             return emp;
         }
 
@@ -150,7 +142,6 @@
             String sql = "SELECT COUNT(*) FROM employee WHERE username = ?";
             try (Connection conn = getConnection();
                  PreparedStatement ps = conn.prepareStatement(sql)) {
-
                 ps.setString(1, username);
                 ResultSet rs = ps.executeQuery();
 

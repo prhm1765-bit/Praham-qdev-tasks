@@ -2,7 +2,7 @@ package com.employee.register.bean;
 
 public class Employee {
 
-    private int id; // new
+    private int id;
     private String firstname;
     private String lastname;
     private String username;
@@ -10,10 +10,8 @@ public class Employee {
     private String contactno;
     private String address;
 
-    // default constructor
     public Employee() {}
 
-    // constructor with all fields including id
     public Employee(int id, String firstname, String lastname, String username, String password, String address, String contactno) {
         this.id = id;
         this.firstname = firstname;
@@ -24,7 +22,6 @@ public class Employee {
         this.contactno = contactno;
     }
 
-    // constructor without id (for insert)
     public Employee(String firstname, String lastname, String username, String password, String contactno, String address) {
         this.firstname = firstname;
         this.lastname = lastname;
@@ -34,7 +31,6 @@ public class Employee {
         this.address = address;
     }
 
-    // getters and setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -55,4 +51,5 @@ public class Employee {
 
     public String getAddress() { return address; }
     public void setAddress(String address) { this.address = address; }
+
 }
