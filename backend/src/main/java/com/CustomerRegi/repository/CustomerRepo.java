@@ -1,0 +1,10 @@
+package com.CustomerRegi.repository;
+
+import com.CustomerRegi.model.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CustomerRepo extends JpaRepository<Customer, Integer> {
+
+	boolean existsByEmailAndIdNot(String email, Integer id);
+
+}
